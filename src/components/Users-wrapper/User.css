@@ -1,0 +1,45 @@
+.wrapper {
+  padding: 20px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 300px;
+  padding: 14px;
+  margin-top: 10px;
+  background: rgb(246, 246, 246);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card img {
+  width: 258px;
+  height: 300px;
+  object-fit: cover;
+}
+.cart_btn {
+  border: 0;
+  background: 0;
+  width: 55px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin-top: 5px;
+  background-color: rgb(255, 0, 0);
+}
+.pro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pro2 {
+  display: flex;
+  gap: 10px;
+}

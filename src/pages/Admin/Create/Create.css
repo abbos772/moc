@@ -1,0 +1,18 @@
+.inp {
+  text-align: center;
+}
+.input {
+  border-radius: 5px;
+  width: 300px;
+  height: 25px;
+  margin: 10px;
+}
+.inp button {
+  background: red;
+  border: 0;
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+}
