@@ -22,6 +22,8 @@
   width: 258px;
   height: 300px;
   object-fit: cover;
+  padding-left: 20px;
+  padding-top: 5px;
 }
 .cart_btn {
   border: 0;
@@ -42,4 +44,15 @@
 .pro2 {
   display: flex;
   gap: 10px;
+}
+.fl {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.like {
+  border: 0;
+  background: 0;
+  font-size: 18px;
+  padding-top: 5px;
 }

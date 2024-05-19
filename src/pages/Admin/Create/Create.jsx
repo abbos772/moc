@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { usePostUserMutation } from "../../../context/api/userApi";
 import "./Create.css";
+import { Outlet } from "react-router-dom";
 let initialState = {
   name: "",
   age: "",
@@ -39,6 +40,7 @@ function Create() {
         />
         <button>Submit</button>
       </form>
+      <Outlet />
     </div>
   );
 }

@@ -52,9 +52,11 @@ const Navbar = () => {
           className={activeTab === 1 ? "active" : ""}
           onClick={() => handleTabClick(1)}
         >
-          <a href="javascript:void(0);">
-            <i className="far fa-address-book"></i>Address Book
-          </a>
+          <Link to={"/product"}>
+            <p href="javascript:void(0);">
+              <i className="far fa-address-book"></i>Product
+            </p>
+          </Link>
         </li>
         <li
           className={activeTab === 2 ? "active" : ""}
@@ -84,7 +86,9 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="icons">
-        <FaHeart />
+        <Link to={"/wishlist"}>
+          <FaHeart />
+        </Link>
         <FaCartPlus />
       </div>
     </div>

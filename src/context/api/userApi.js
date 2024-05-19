@@ -9,6 +9,19 @@ export const productApi = api.injectEndpoints({
       }),
       providesTags: ["User"],
     }),
+    getProducts: build.query({
+      query: () => ({
+        url: "/products",
+      }),
+      providesTags: ["User"],
+    }),
+    getUserDetail: build.query({
+      query: (id) => ({
+        url: `/users/${id}`,
+        method: "GET",
+      }),
+      providesTags: ["User"],
+    }),
     deleteUser: build.mutation({
       query: (id) => ({
         url: `/users/${id}`,
@@ -24,7 +37,22 @@ export const productApi = api.injectEndpoints({
       }),
       invalidatesTags: ["User"],
     }),
+    putUser: build.mutation({
+      query: ({ id, body }) => ({
+        url: `/users/${id}`,
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["User"],
+    }),
   }),
 });
-export const { useGetUsersQuery, useDeleteUserMutation, usePostUserMutation } =
-  productApi;
+
+export const {
+  useGetUsersQuery,
+  useDeleteUserMutation,
+  usePostUserMutation,
+  useGetProductsQuery,
+  useGetUserDetailQuery,
+  usePutUserMutation,
+} = productApi;

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { memo, useState } from "react";
 import "./User.css";
 import { useDeleteUserMutation } from "../../context/api/userApi";
+import EditModel from "../EditModel/EditModel";
 
 function UsersWrapper({ users, isAdmin }) {
+  const [editUser, setEditUSer] = useState(null);
+
   const [deleteUser] = useDeleteUserMutation();
 
   const handleDelete = (id) => {
@@ -22,17 +25,23 @@ function UsersWrapper({ users, isAdmin }) {
             Delete
           </button>
           <button
-            style={{ background: "rgb(49, 162, 255)" }}
+            style={{ background: "#5161ce" }}
             className="cart_btn"
+            onClick={() => setEditUSer(el)}
           >
-            Create
+            Edit
           </button>
         </div>
       )}
     </div>
   ));
 
-  return <div className="wrapper">{userElements}</div>;
+  return (
+    <div className="wrapper">
+      {userElements}
+      {editUser ? <EditModel data={editUser} setData={setEditUSer} /> : <></>}
+    </div>
+  );
 }
 
-export default UsersWrapper;
+export default memo(UsersWrapper);
